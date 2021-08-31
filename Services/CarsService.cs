@@ -12,7 +12,7 @@ namespace gregslist.Services
     }
     internal Car Get(string id)
     {
-      Car found = FakeDB.Cars.Find(csharp_gregslist => c.Id == id);
+      Car found = FakeDB.Cars.Find(c => c.Id == id);
       if (found == null)
       {
         throw new Exception("Invalid Id");
@@ -26,7 +26,7 @@ namespace gregslist.Services
     }
     internal void Delete(string id)
     {
-      int deleted = FakeDB.Cars.RemoveAll(Car => csharp_gregslist.Id == id);
+      int deleted = FakeDB.Cars.RemoveAll(c => c.Id == id);
       if (deleted == 0)
       {
         throw new Exception("Invalid Id");

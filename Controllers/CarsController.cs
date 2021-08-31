@@ -21,7 +21,7 @@ namespace gregslist.Controllers
       try
       {
         IEnumerable<Car> cars = _carsService.Get();
-        return ok(cars);
+        return Ok(cars);
       }
       catch (Exception err)
       {
@@ -30,12 +30,12 @@ namespace gregslist.Controllers
       }
     }
     [HttpGet("{id}")]
-    public ACtionResult<Car> GetACtionResult(string id)
+    public ActionResult<Car> GetACtionResult(string id)
     {
       try
       {
         Car found = _carsService.Get(id);
-        return ok(found);
+        return Ok(found);
       }
       catch (Exception err)
       {
@@ -44,12 +44,12 @@ namespace gregslist.Controllers
       }
     }
     [HttpPost]
-    public ActionResult<Car> Create([FromBody] Car NewCar)
+    public ActionResult<Car> Create([FromBody] Car newCar)
     {
       try
       {
         Car car = _carsService.Create(newCar);
-        return ok(car);
+        return Ok(car);
       }
       catch (Exception err)
       {
@@ -58,12 +58,12 @@ namespace gregslist.Controllers
       }
     }
     [HttpDelete("{id}")]
-    public ACtionResult<String> Delete(string id)
+    public ActionResult<String> Delete(string id)
     {
       try
       {
         _carsService.Delete(id);
-        return ok("Successfully Deleted Car");
+        return Ok("Successfully Deleted Car");
       }
       catch (Exception err)
       {
