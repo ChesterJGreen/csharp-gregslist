@@ -30,8 +30,8 @@ namespace csharp_gregslist
 
       services.AddControllers();
       services.AddTransient<CarsService>();
-      // services.AddTransient<HomesService>();
-      // services.AddTransient<JobsService>();
+      services.AddTransient<HomesService>();
+      services.AddTransient<JobsService>();
       services.AddSwaggerGen(c =>
       {
         c.SwaggerDoc("v1", new OpenApiInfo { Title = "csharp_gregslist", Version = "v1" });

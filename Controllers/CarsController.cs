@@ -30,7 +30,7 @@ namespace gregslist.Controllers
       }
     }
     [HttpGet("{id}")]
-    public ActionResult<Car> GetACtionResult(string id)
+    public ActionResult<Car> Get(string id)
     {
       try
       {
