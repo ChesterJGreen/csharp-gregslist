@@ -11,12 +11,12 @@ namespace gregslist.Models
     [MaxLength(15)]
     public string Name { get; set; }
     [Range(0, int.MaxValue)]
-    public int Age { get; set; }
+    public int Year { get; set; }
     public string Description { get; set; }
-    public Car(string name, int age, string description)
+    public Car(string name, int year, string description)
     {
       Name = name;
-      Age = age;
+      Year = year;
       Description = description;
       Id = Guid.NewGuid().ToString();
     }
