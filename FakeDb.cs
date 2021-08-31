@@ -1,8 +1,10 @@
 using System.Collections.Generic;
-using csharp_gregslist.Models;
+using gregslist.Models;
 
-namespace csharp_gregslist
+namespace gregslist
 {
   static public class FakeDB
 }
-static public List<Car> Cars { get; set; } = new List<Car>() { new Car() };
+static public List<Car> Cars { get; set; } = new List<Car>() { new Car("Honda Accord", 2010, "comes from the plains") };
+}
+}
